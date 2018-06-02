@@ -9,134 +9,128 @@
 
 <table>
   <tbody>
-  <td>
     <tr>
-      <td class="item"><img src="{{image}}" widtr="80" height="80"></td>
-      <td class="coin-name">{{name}}（{{symbol | uppercase}}）</td>
+      <td colspan="2" class="coin-name"><img src="{{image}}" width="50" height="50"> {{name}}（{{symbol | uppercase}}）</td>
     </tr>
-    <tr class="category">マーケット情報</tr>
     <tr>
-      <td class="item">更新時間</td>
+      <th class="item">更新時間</th>
       <td>{{datetime | chatDate }}</td>
     </tr>
     <tr>
-      <td class="item">現在価格</td>
+      <th class="item">現在価格</th>
       <td>¥{{current_price_jpy | number}}</td>
     </tr>
     <tr>
-      <td class="item">時価総額</td>
+      <th class="item">時価総額</th>
       <td>¥{{market_cap_jpy | number}}</td>
     </tr>
     <tr>
-      <td class="item">総額</td>
+      <th class="item">総額</th>
       <td>¥{{total_volume_jpy | number}}</td>
     </tr>
     <tr>
-      <td class="item">high</td>
+      <th class="item">high</th>
       <td>¥{{high_jpy | number}}</td>
     </tr>
     <tr>
-      <td class="item">low</td>
+      <th class="item">low</th>
       <td>¥{{low_jpy | number}}</td>
     </tr>
     <tr>
-      <td class="item">24時間の値動き</td>
+      <th class="item">24時間の値動き</th>
       <td>{{price_change_24h}}（{{price_change_percentage_24h}}%）</td>
     </tr>
     <tr>
-      <td class="item">7日間の値動き</td>
+      <th class="item">7日間の値動き</th>
       <td>{{price_change_percentage_7d}}%</td>
     </tr>
     <tr>
-      <td class="item">14日間の値動き</td>
+      <th class="item">14日間の値動き</th>
       <td>{{price_change_percentage_14d}}%</td>
     </tr>
     <tr>
-      <td class="item">30日間の値動き</td>
+      <th class="item">30日間の値動き</th>
       <td>{{price_change_percentage_30d}}%</td>
     </tr>
     <tr>
-      <td class="item">60日間の値動き</td>
+      <th class="item">60日間の値動き</th>
       <td>{{price_change_percentage_60d}}%</td>
     </tr>
     <tr>
-      <td class="item">200日間の値動き</td>
+      <th class="item">200日間の値動き</th>
       <td>{{price_change_percentage_200d}}%</td>
     </tr>
     <tr>
-      <td class="item">1年間の値動き</td>
+      <th class="item">1年間の値動き</th>
       <td>{{price_change_percentage_1y}}%</td>
     </tr>
     <tr>
-      <td class="item">24時間の時価総額の変化</td>
+      <th class="item">24時間の時価総額の変化</th>
       <td>{{market_cap_change_24h}}（{{market_cap_change_percentage_24h}}%）</td>
     </tr>
-    <tr class="category">コミュニティ情報</tr>
     <tr>
-      <td class="item">Facebookいいね数</td>
+      <th class="item">Facebookいいね数</th>
       <td>{{facebook_likes | number}}いいね</td>
     </tr>
     <tr>
-      <td class="item">Twitterフォロワー数</td>
+      <th class="item">Twitterフォロワー数</th>
       <td>{{twitter_followers | number}}人</td>
     </tr>
     <tr>
-      <td class="item">48時間でのReddit投稿の平均</td>
+      <th class="item">48時間でのReddit投稿の平均</th>
       <td>{{reddit_average_posts_48h | number}}本</td>
     </tr>
     <tr>
-      <td class="item">48時間でのRedditコメントの平均</td>
+      <th class="item">48時間でのRedditコメントの平均</th>
       <td>{{twitter_followers | number}}個</td>
     </tr>
     <tr>
-      <td class="item">Reddit読者数</td>
+      <th class="item">Reddit読者数</th>
       <td>{{reddit_subscribers | number}}人</td>
     </tr>
     <tr>
-      <td class="item">Reddit48時間以内ログインアカウント</td>
+      <th class="item">Reddit48時間以内ログインアカウント</th>
       <td>{{reddit_accounts_active_48h | number}}個</td>
     </tr>
-    <tr class="category">開発情報</tr>
     <tr>
-      <td class="item">フォーク数</td>
+      <th class="item">Githubフォーク数</th>
       <td>{{forks | number}}回</td>
     </tr>
     <tr>
-      <td class="item">スター数</td>
+      <th class="item">Githubスター数</th>
       <td>{{stars | number}}個</td>
     </tr>
     <tr>
-      <td class="item">購読者数</td>
+      <th class="item">Github購読者数</th>
       <td>{{subscribers | number}}人</td>
     </tr>
     <tr>
-      <td class="item">Issue数</td>
+      <th class="item">GithubのIssue数</th>
       <td>{{total_issues | number}}個</td>
     </tr>
     <tr>
-      <td class="item">クローズしたIssue数</td>
+      <th class="item">GithubクローズしたIssue数</th>
       <td>{{closed_issues | number}}人</td>
     </tr>
     <tr>
-      <td class="item">マージされたプルリク数</td>
+      <th class="item">Githubマージされたプルリク数</th>
       <td>{{pull_requests_merged | number}}人</td>
     </tr>
     <tr>
-      <td class="item">コントリビューター数</td>
+      <th class="item">Githubコントリビューター数</th>
       <td>{{pull_request_contributors | number}}人</td>
     </tr>
     <tr>
-      <td class="item">4週間でのコミット数</td>
+      <th class="item">Github4週間でのコミット数</th>
       <td>{{commit_count_4_weeks | number}}人</td>
     </tr>
     <tr>
-      <td class="item">コインの説明</td>
+      <th class="item">コインの説明</th>
       <td>{{description}}</td>
     </tr>
     <tr>
-      <td class="item">CoinGeckoスコア</td>
+      <th class="item">CoinGeckoスコア</th>
       <td>{{coingecko_score | number}}</td>
     </tr>
-  </td>
   </tbody>
 </table>

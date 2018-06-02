@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Pipe, PipeTransform } from '@angular/core';
-import * as moment from 'moment';
 
 import { CoinService } from "../../service/coin/coin.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-coin',
@@ -50,9 +49,15 @@ export class CoinComponent implements OnInit {
   last_updated: string;
   datetime: Date;
 
-  constructor(private coinService: CoinService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private coinService: CoinService
+  ) {}
 
   ngOnInit() {
+    if (this.route.snapshot.paramMap.get('id') != null) {
+      this.coinId = this.route.snapshot.paramMap.get('id');
+    }
     this.onclick();
   }
 
@@ -95,12 +100,6 @@ export class CoinComponent implements OnInit {
           this.pull_request_contributors = response.developer_data.pull_request_contributors;
           this.commit_count_4_weeks = response.developer_data.commit_count_4_weeks;
           this.last_updated = response.last_updated;
-          // let year = this.last_updated.slice(0,4);
-          // let month = this.last_updated.slice(5,7);
-          // let day = this.last_updated.slice(8,10);
-          // let hour = this.last_updated.slice(11,13);
-          // let minute = this.last_updated.slice(14,16);
-          // let second = this.last_updated.slice(17,19);
           this.datetime = new Date( response.last_updated );
         },
         error => {

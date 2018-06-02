@@ -1,27 +1,28 @@
 table {
-  margin: 0 auto;
-  width: 900px;
-  border: none;
-  border-collapse: separate;
-  border-spacing: 0 10px;
+  width: 95%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  text-align: center;
 }
 
-/*td {*/
-/*border: 1px groove #888888;*/
-/*color: #333;*/
-/*font-size: 16px;*/
-/*}*/
+table th, table td {
+  border: solid 1px black;
+}
+
+table th{
+  color: black;
+  background: lightgreen;
+  padding: 10px;
+}
+
+table td {
+  padding: 3px 10px;
+}
+
+li {
+  display: inline;
+}
 
 .coin-name {
   font-size: xx-large;
-}
-
-.category {
-  font-size: large;
-  background-color: ghostwhite;
-  font-weight: bold;
-}
-
-.item {
-  width: 350px;
 }

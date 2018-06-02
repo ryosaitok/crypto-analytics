@@ -1,3 +1,42 @@
-<p>
-  coins works!
-</p>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<h2>
+  Coins
+</h2>
+
+<div class="pagination">
+  <li *ngFor='let page of pages'>
+    <button mat-raised-button [disabled]="page.toString() == currentPage" (click)="onclick(page)">{{page}}</button>
+  </li>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>アイコン</th>
+      <th>名前</th>
+      <th>更新時間(UTC)</th>
+      <th>現在価格</th>
+      <th>時価総額</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>24時間の値動き</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let coin of coins" (click)="routeCoin(coin.id)">
+      <td><img src="{{coin.image?.small}}"></td>
+      <td>{{coin.name}}（{{coin.symbol | uppercase}}）</td>
+      <td>{{coin.last_updated?.slice(0,10)}} {{coin.last_updated?.slice(11,16)}}</td>
+      <td>¥{{coin.market_data.current_price?.jpy | number}}</td>
+      <td>¥{{coin.market_data.market_cap?.jpy | number}}</td>
+      <td>¥{{coin.market_data.high?.jpy | number}}</td>
+      <td>¥{{coin.market_data.low?.jpy | number}}</td>
+      <td>{{coin.market_data.price_change_24h}}（{{coin.market_data.price_change_percentage_24h}}%）</td>
+    </tr>
+  </tbody>
+</table>
+
+<li *ngFor='let page of pages'>
+  <button mat-raised-button [disabled]="page.toString() == currentPage" (click)="onclick(page)">{{page}}</button>
+</li>

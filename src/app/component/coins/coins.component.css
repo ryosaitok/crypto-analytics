@@ -1,0 +1,28 @@
+table {
+  width: 95%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table th, table td {
+  border: solid 1px black;
+}
+
+table th{
+  color: black;
+  background: lightgreen;
+  padding: 10px;
+}
+
+table td {
+  padding: 3px 10px;
+}
+
+li {
+  display: inline;
+}
+
+.pagination {
+  margin-bottom: 10px;
+}

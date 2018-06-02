@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashborad', pathMatch: 'full' },
   { path: 'dashborad', component: DashboardComponent },
   { path: 'coin', component: CoinComponent },
+  { path: 'coin/:id', component: CoinComponent },
   { path: 'coins', component: CoinsComponent }
 ];
 
