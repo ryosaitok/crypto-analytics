@@ -32,7 +32,7 @@
       <td>¥{{coin.market_data.market_cap?.jpy | number}}</td>
       <td>¥{{coin.market_data.high?.jpy | number}}</td>
       <td>¥{{coin.market_data.low?.jpy | number}}</td>
-      <td>{{coin.market_data.price_change_24h}}（{{coin.market_data.price_change_percentage_24h}}%）</td>
+      <td>{{coin.market_data.price_change_24h?.slice(0,20)}}（{{coin.market_data.price_change_percentage_24h?.slice(0,20)}}%）</td>
     </tr>
   </tbody>
 </table>

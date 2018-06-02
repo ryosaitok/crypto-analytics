@@ -14,7 +14,7 @@ export class CoinComponent implements OnInit {
   id: string;
   symbol: string;
   name: string;
-  description: string;
+  // description: string;
   image: string;
   coingecko_score: number;
   current_price_jpy: number;
@@ -67,7 +67,7 @@ export class CoinComponent implements OnInit {
           this.id = response.id;
           this.symbol = response.symbol;
           this.name = response.name;
-          this.description = response.description.en;
+          // this.description = response.description.en;
           this.image = response.image.small;
           this.coingecko_score = response.coingecko_score;
           this.current_price_jpy = response.market_data.current_price.jpy;
