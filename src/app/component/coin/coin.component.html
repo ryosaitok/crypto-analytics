@@ -1,0 +1,142 @@
+<h2>
+  Coin
+</h2>
+<form>
+  <label for="coinId">コインのID:</label>
+  <input id="coinId" name="coinId" type="text" size="50" [(ngModel)]="coinId">
+  <input type="button" (click)="onclick()" value="検索" />
+</form>
+
+<table>
+  <tbody>
+  <td>
+    <tr>
+      <td class="item"><img src="{{image}}" widtr="80" height="80"></td>
+      <td class="coin-name">{{name}}（{{symbol | uppercase}}）</td>
+    </tr>
+    <tr class="category">マーケット情報</tr>
+    <tr>
+      <td class="item">更新時間</td>
+      <td>{{datetime | chatDate }}</td>
+    </tr>
+    <tr>
+      <td class="item">現在価格</td>
+      <td>¥{{current_price_jpy | number}}</td>
+    </tr>
+    <tr>
+      <td class="item">時価総額</td>
+      <td>¥{{market_cap_jpy | number}}</td>
+    </tr>
+    <tr>
+      <td class="item">総額</td>
+      <td>¥{{total_volume_jpy | number}}</td>
+    </tr>
+    <tr>
+      <td class="item">high</td>
+      <td>¥{{high_jpy | number}}</td>
+    </tr>
+    <tr>
+      <td class="item">low</td>
+      <td>¥{{low_jpy | number}}</td>
+    </tr>
+    <tr>
+      <td class="item">24時間の値動き</td>
+      <td>{{price_change_24h}}（{{price_change_percentage_24h}}%）</td>
+    </tr>
+    <tr>
+      <td class="item">7日間の値動き</td>
+      <td>{{price_change_percentage_7d}}%</td>
+    </tr>
+    <tr>
+      <td class="item">14日間の値動き</td>
+      <td>{{price_change_percentage_14d}}%</td>
+    </tr>
+    <tr>
+      <td class="item">30日間の値動き</td>
+      <td>{{price_change_percentage_30d}}%</td>
+    </tr>
+    <tr>
+      <td class="item">60日間の値動き</td>
+      <td>{{price_change_percentage_60d}}%</td>
+    </tr>
+    <tr>
+      <td class="item">200日間の値動き</td>
+      <td>{{price_change_percentage_200d}}%</td>
+    </tr>
+    <tr>
+      <td class="item">1年間の値動き</td>
+      <td>{{price_change_percentage_1y}}%</td>
+    </tr>
+    <tr>
+      <td class="item">24時間の時価総額の変化</td>
+      <td>{{market_cap_change_24h}}（{{market_cap_change_percentage_24h}}%）</td>
+    </tr>
+    <tr class="category">コミュニティ情報</tr>
+    <tr>
+      <td class="item">Facebookいいね数</td>
+      <td>{{facebook_likes | number}}いいね</td>
+    </tr>
+    <tr>
+      <td class="item">Twitterフォロワー数</td>
+      <td>{{twitter_followers | number}}人</td>
+    </tr>
+    <tr>
+      <td class="item">48時間でのReddit投稿の平均</td>
+      <td>{{reddit_average_posts_48h | number}}本</td>
+    </tr>
+    <tr>
+      <td class="item">48時間でのRedditコメントの平均</td>
+      <td>{{twitter_followers | number}}個</td>
+    </tr>
+    <tr>
+      <td class="item">Reddit読者数</td>
+      <td>{{reddit_subscribers | number}}人</td>
+    </tr>
+    <tr>
+      <td class="item">Reddit48時間以内ログインアカウント</td>
+      <td>{{reddit_accounts_active_48h | number}}個</td>
+    </tr>
+    <tr class="category">開発情報</tr>
+    <tr>
+      <td class="item">フォーク数</td>
+      <td>{{forks | number}}回</td>
+    </tr>
+    <tr>
+      <td class="item">スター数</td>
+      <td>{{stars | number}}個</td>
+    </tr>
+    <tr>
+      <td class="item">購読者数</td>
+      <td>{{subscribers | number}}人</td>
+    </tr>
+    <tr>
+      <td class="item">Issue数</td>
+      <td>{{total_issues | number}}個</td>
+    </tr>
+    <tr>
+      <td class="item">クローズしたIssue数</td>
+      <td>{{closed_issues | number}}人</td>
+    </tr>
+    <tr>
+      <td class="item">マージされたプルリク数</td>
+      <td>{{pull_requests_merged | number}}人</td>
+    </tr>
+    <tr>
+      <td class="item">コントリビューター数</td>
+      <td>{{pull_request_contributors | number}}人</td>
+    </tr>
+    <tr>
+      <td class="item">4週間でのコミット数</td>
+      <td>{{commit_count_4_weeks | number}}人</td>
+    </tr>
+    <tr>
+      <td class="item">コインの説明</td>
+      <td>{{description}}</td>
+    </tr>
+    <tr>
+      <td class="item">CoinGeckoスコア</td>
+      <td>{{coingecko_score | number}}</td>
+    </tr>
+  </td>
+  </tbody>
+</table>
