@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CoinService } from "../../service/coin/coin.service";
-import {ActivatedRoute} from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-coin',
@@ -14,7 +14,6 @@ export class CoinComponent implements OnInit {
   id: string;
   symbol: string;
   name: string;
-  // description: string;
   image: string;
   coingecko_score: number;
   current_price_jpy: number;
@@ -67,7 +66,6 @@ export class CoinComponent implements OnInit {
           this.id = response.id;
           this.symbol = response.symbol;
           this.name = response.name;
-          // this.description = response.description.en;
           this.image = response.image.small;
           this.coingecko_score = response.coingecko_score;
           this.current_price_jpy = response.market_data.current_price.jpy;
@@ -99,7 +97,6 @@ export class CoinComponent implements OnInit {
           this.pull_requests_merged = response.developer_data.pull_requests_merged;
           this.pull_request_contributors = response.developer_data.pull_request_contributors;
           this.commit_count_4_weeks = response.developer_data.commit_count_4_weeks;
-          this.last_updated = response.last_updated;
           this.datetime = new Date( response.last_updated );
         },
         error => {
