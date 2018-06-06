@@ -19,8 +19,8 @@ export class CoinComponent implements OnInit {
   current_price_jpy: number;
   market_cap_jpy: number;
   total_volume_jpy: number;
-  high_jpy: number;
-  low_jpy: number;
+  high_24h: any;
+  low_24h: any;
   price_change_24h: string;
   price_change_percentage_24h: string;
   price_change_percentage_7d: string;
@@ -71,8 +71,8 @@ export class CoinComponent implements OnInit {
           this.current_price_jpy = response.market_data.current_price.jpy;
           this.market_cap_jpy = response.market_data.market_cap.jpy;
           this.total_volume_jpy = response.market_data.total_volume.jpy;
-          this.high_jpy = response.market_data.high.jpy;
-          this.low_jpy = response.market_data.low.jpy;
+          this.high_24h = response.market_data.high_24h;
+          this.low_24h = response.market_data.low_24h;
           this.price_change_24h = response.market_data.price_change_24h;
           this.price_change_percentage_24h = response.market_data.price_change_percentage_24h;
           this.price_change_percentage_7d = response.market_data.price_change_percentage_7d;
